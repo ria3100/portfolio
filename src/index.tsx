@@ -3,13 +3,14 @@ import * as ReactDOM from 'react-dom'
 
 import { StoreContext } from 'redux-react-hook';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 import routes from './routes'
-
 import store from './modules'
-// import Top from './pages/home'
 
-import './assets/scss/style.css'
+// import style from './assets/scss/style.scss'
+// import './assets/scss/style.scss'
 import 'bulma/css/bulma.min.css'
+
 
 // import registerServiceWorker from './registerServiceWorker'
 
