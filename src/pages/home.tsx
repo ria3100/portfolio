@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
-import TopTemplate from '../components/templates/topTemplate'
+import { HomeTemplate } from '../components/templates'
 
 export default () => {
   return (
@@ -11,7 +11,7 @@ export default () => {
         <title>My Title</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <TopTemplate />
+      <HomeTemplate />
     </>
   )
 }

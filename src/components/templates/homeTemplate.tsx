@@ -1,9 +1,7 @@
 import * as React from 'react'
 
 // import TodoInput from '../organisms/todoInput'
-import TodoList from '../organisms/todoList'
-import Main from '../organisms/main'
-import Footer from '../organisms/footer'
+import { TodoList, Main, Footer } from '../organisms'
 
 class App extends React.Component {
   public render() {
