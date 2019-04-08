@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import routes from './routes'
 import store from './modules'
 
-import './assets/scss/style.css'
+import './assets/css/style.css'
 
 // import registerServiceWorker from './registerServiceWorker'
 

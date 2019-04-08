@@ -20,8 +20,8 @@
     "redux-react-hook": "^3.2.1"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar src/assets/scss/ -o src/assets/scss/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/assets/scss/ -o src/assets/scss/ --watch --recursive",
+    "build-css": "node-sass-chokidar src/assets/scss/style.scss -o src/assets/css/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/assets/scss/style.scss -o src/assets/css/ --watch --recursive",
     "start": "npm-run-all -p watch-css start-ts",
     "start-ts": "react-scripts-ts start",
     "build": "npm-run-all -p build-css build-ts",
