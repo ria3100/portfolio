@@ -7,7 +7,7 @@ import todoOperations from '../../modules/todo/operations'
 
 import { bindActionCreators } from 'redux';
 
-export default function TodoList() {
+export default () => {
   const { todoCount, list } = useMappedState(
     useCallback(
       (state: any) => ({

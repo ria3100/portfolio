@@ -1,5 +1,5 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import { StoreContext } from 'redux-react-hook';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -7,10 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import routes from './routes'
 import store from './modules'
 
-// import style from './assets/scss/style.scss'
-// import './assets/scss/style.scss'
-import 'bulma/css/bulma.min.css'
-
+import './assets/scss/style.css'
 
 // import registerServiceWorker from './registerServiceWorker'
 
