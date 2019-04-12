@@ -1,3 +1,10 @@
 export { default as Footer } from './footer'
 export { default as Main } from './main'
+export { default as Navigation } from './navigation'
+export { default as About } from './about'
+export { default as BlogCategories } from './blogCategories'
+export { default as FromSocial } from './fromSocial'
+export { default as Contact } from './contact'
+export { default as SourceCode } from './sourceCode'
+
 export { default as TodoList } from './todoList'

@@ -1,0 +1,5 @@
+export { default as DarkSection } from './darkSection'
+export { default as PrimarySection } from './primarySection'
+export { default as WhiteSection } from './whiteSection'
+export { default as GradationSection } from './gradationSection'
+export { default as SectionTitle } from './sectionTitle'
