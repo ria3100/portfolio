@@ -7,9 +7,9 @@ import {
   NavbarBrand,
   // NavbarItem,
   NavbarBurger,
-  NavbarMenu,
+  // NavbarMenu,
   // NavbarStart,
-  NavbarEnd,
+  // NavbarEnd,
 } from 'bloomer'
 
 export default () => {
@@ -21,13 +21,13 @@ export default () => {
         </Link>
         <NavbarBurger isActive={false} />
       </NavbarBrand>
-      <NavbarMenu isActive={false}>
+      {/* <NavbarMenu isActive={false}>
         <NavbarEnd>
           <Link to="/" className="navbar-item">About</Link>
           <Link to="/" className="navbar-item">Contact</Link>
           <Link to="/" className="navbar-item">Blog</Link>
         </NavbarEnd>
-      </NavbarMenu>
+      </NavbarMenu> */}
     </StyledNavbar>
   )
 }
@@ -35,7 +35,7 @@ export default () => {
 const StyledNavbar = styled(Navbar)`
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   font-weight: bold;
-  padding: 0 48px;
+  padding: 0 16px;
 `
 
 // const Logo = styled(NavbarItem)`

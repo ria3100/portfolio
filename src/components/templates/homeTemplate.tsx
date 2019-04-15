@@ -7,8 +7,8 @@ import {
   Navigation,
   About,
   BlogCategories,
-  FromSocial,
-  Contact,
+  Skils,
+  Social,
   SourceCode,
 } from '../organisms'
 
@@ -19,8 +19,8 @@ export default () => {
       <Main />
       <BlogCategories />
       <About />
-      <FromSocial />
-      <Contact />
+      <Skils />
+      <Social />
       <SourceCode />
       {/* <TodoList /> */}
       <Footer />

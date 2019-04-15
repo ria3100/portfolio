@@ -6,6 +6,27 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
+// animate.css
+@import '../../../node_modules/animate.css/animate.css';
+
+@keyframes fadeInUpSmall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0)
+  }
+
+  100% {
+    opacity: 1;
+    transform: none
+  }
+}
+
+.fadeInUpSmall {
+  animation-name: fadeInUpSmall
+}
+
+
+// Bluma
 @import '../../../node_modules/bulma/sass/utilities/_all.sass';
 
 // Set your brand colors

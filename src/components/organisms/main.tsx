@@ -2,14 +2,19 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import { Hero, HeroBody, Title, Subtitle, Container } from 'bloomer'
+import { Animated } from '../atoms'
 
 export default () => {
   return (
     <Hero isColor="dark" isSize="medium">
       <StyledHeroBody>
         <Container hasTextAlign="centered">
-          <StyledTitle>Ria</StyledTitle>
-          <StyledSubtitle>Front-end Developer</StyledSubtitle>
+          <Animated>
+            <StyledTitle>Ria</StyledTitle>
+          </Animated>
+          <Animated animationIn="fadeInUp" animationDelay={0.16}>
+            <StyledSubtitle>Front-end Engineer</StyledSubtitle>
+          </Animated>
         </Container>
       </StyledHeroBody>
     </Hero>

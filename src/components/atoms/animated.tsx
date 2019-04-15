@@ -1,0 +1,35 @@
+import React from 'react'
+import { AnimatedOnScroll } from 'react-animated-css-onscroll'
+import styled from '@emotion/styled'
+
+/* 
+ * animationInDelay, animationOutDelay が動作しないから
+ * CSSを定義するだけのコンポーネント
+*/
+export default props => {
+  const delay = props.animationDelay ? props.animationDelay : 0
+  const screenOffset = '' + props.screenOffset ? props.screenOffset : 50
+
+  return (
+    <Animated
+      delay={delay}
+      animationIn={props.animationIn}
+      animationOut={props.animationOut}
+      // animationInDelay={props.animationInDelay}
+      // animationOutDelay={props.animationOutDelay}
+      animationInDuration={props.animationInDuration}
+      animationOutDuration={props.animationOutDuration}
+      style={props.style}
+      innerRef={props.innerRef}
+      className={props.className}
+      animateOnMount={props.animateOnMount}
+      screenOffset={screenOffset}
+    >
+      {props.children}
+    </Animated>
+  )
+}
+
+const Animated = styled(AnimatedOnScroll)`
+  animation-delay: ${(props: any) => props.delay}s !important;
+`

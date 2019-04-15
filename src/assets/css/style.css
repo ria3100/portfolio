@@ -2,6 +2,18 @@
 @import url("https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url(../../../node_modules/animate.css/animate.css);
+@keyframes fadeInUpSmall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+.fadeInUpSmall {
+  animation-name: fadeInUpSmall; }
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }

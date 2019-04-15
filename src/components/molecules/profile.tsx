@@ -16,9 +16,9 @@ export default () => {
           </ImgColumn>
           <TextColumn isSize={8}>
             <ul>
-              <li><span>NAME:</span> Atshushi Sakamoto</li>
+              <li><span>NAME:</span> Atsushi Sakamoto</li>
               <li><span>AGE:</span> {age}</li>
-              <li><span>JOB TITLE:</span> Front-end Developer</li>
+              <li><span>JOB TITLE:</span> Front-end Engineer</li>
               <li><span>LOCATION:</span> Osaka, Japan</li>
             </ul>
             foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo
@@ -48,7 +48,7 @@ const TextColumn = styled(Column)`
 
     & span {
       display: inline-block;
-      width: 20%;
+      width: 8rem;
       font-weight: bold;
     }
   }
