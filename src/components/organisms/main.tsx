@@ -36,6 +36,10 @@ const StyledTitle = styled(Title)`
   line-height: 140px;
   font-weight: 700;
   font-family: 'Product Sans', sans-serif;
+  @media screen and (max-width: 768px) {
+    font-size: 80px;
+    line-height: 80px;
+  }
 `
 
 const StyledSubtitle = styled(Subtitle)`
