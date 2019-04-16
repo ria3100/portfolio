@@ -9,7 +9,7 @@ export default () => {
     <Hero isColor="dark" isSize="medium">
       <StyledHeroBody>
         <Container hasTextAlign="centered">
-          <Animated>
+          <Animated animationInDuration={2400}>
             <StyledTitle>Ria</StyledTitle>
           </Animated>
           <Animated animationIn="fadeInUp" animationDelay={0.16}>

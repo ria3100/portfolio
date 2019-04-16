@@ -7,6 +7,7 @@ export default styled(Section)`
   color: hsl(0, 0%, 96%);
   border-top: 24px solid #f7a9c4;
   position: relative;
+  padding: 9rem 1.5rem;
   &:before {
     content: '';
     border-top: 24px solid #f27ba3;

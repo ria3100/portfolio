@@ -9,6 +9,10 @@ import styled from '@emotion/styled'
 export default props => {
   const delay = props.animationDelay ? props.animationDelay : 0
   const screenOffset = '' + props.screenOffset ? props.screenOffset : 50
+  const delayIsMobile =
+    props.animationDelayIsMobile === undefined
+      ? true
+      : props.animationDelayIsMobile
 
   return (
     <Animated
@@ -24,6 +28,7 @@ export default props => {
       className={props.className}
       animateOnMount={props.animateOnMount}
       screenOffset={screenOffset}
+      delayIsMobile={delayIsMobile}
     >
       {props.children}
     </Animated>
@@ -32,4 +37,11 @@ export default props => {
 
 const Animated = styled(AnimatedOnScroll)`
   animation-delay: ${(props: any) => props.delay}s !important;
+  ${(props: any) =>
+    !props.delayIsMobile &&
+    `
+      @media screen and (max-width: 768px) {
+        animation-delay: 0 !important;
+      }
+    `}
 `

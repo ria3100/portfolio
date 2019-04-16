@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import { Container, Columns, Column, Box } from 'bloomer'
-import { DarkSection, Animated } from '../atoms'
+import { DarkSection, SectionTitle, Animated } from '../atoms'
 
 import reactLogo from '../../assets/svg/react.svg'
 import vueLogo from '../../assets/svg/vue.svg'
@@ -10,8 +10,9 @@ import tsLogo from '../../assets/svg/typescript.svg'
 
 export default () => {
   return (
-    <DarkSection className="is-medium">
+    <DarkSection>
       <Container>
+        <SectionTitle>Interest</SectionTitle>
         <Columns>
           <Column isSize={4}>
             <Animated animationIn="fadeInUp">
@@ -45,6 +46,10 @@ const LogoImg = styled.div`
   height: 160px;
   width: 160px;
   margin: 0 auto;
-  background: url(${(props: any) => (props.bg)}) center center no-repeat;
+  background: url(${(props: any) => props.bg}) center center no-repeat;
   background-size: contain;
+  transition-duration: 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
 `

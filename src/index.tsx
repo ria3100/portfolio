@@ -9,7 +9,7 @@ import store from './modules'
 
 import './assets/css/style.css'
 
-// import registerServiceWorker from './registerServiceWorker'
+import registerServiceWorker from './registerServiceWorker'
 
 ReactDOM.render(
   <StoreContext.Provider value={store}>
@@ -21,5 +21,5 @@ ReactDOM.render(
   </StoreContext.Provider>,
   document.getElementById('root')
 )
-// registerServiceWorker()
+registerServiceWorker()
 

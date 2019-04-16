@@ -1,56 +1,40 @@
 import React from 'react'
 
-import { Section, Container, Tile } from 'bloomer'
+import { Container, Tile } from 'bloomer'
 import { SkilBox } from '../molecules'
+import { NormalSection } from '../atoms'
 
 export default () => {
   return (
-    <Section className="is-medium">
+    <NormalSection>
       <Container>
         <Tile isAncestor>
           <Tile isSize={4} isVertical isParent>
-            <Tile
-              isChild
-              render={props => <SkilBox items={skils.language} {...props} />}
-            />
-            <Tile
-              isChild
-              render={props => <SkilBox items={skils.back} {...props} />}
-            />
+            <SkilBox data={skils.language} />
+            <SkilBox data={skils.back} />
           </Tile>
           <Tile isSize={8} isParent>
-            <Tile
-              isChild
-              render={props => <SkilBox items={skils.front} {...props} />}
-            />
+            <SkilBox data={skils.front} animationDelay={0.16} isLarge />
           </Tile>
         </Tile>
         <Tile isAncestor>
           <Tile isSize={4} isParent>
-            <Tile
-              isChild
-              render={props => <SkilBox items={skils.environment} {...props} />}
-            />
+            <SkilBox data={skils.environment} />
           </Tile>
           <Tile isSize={4} isVertical isParent>
-            <Tile
-              isChild
-              render={props => <SkilBox items={skils.DB} {...props} />}
-            />
-            <Tile
-              isChild
-              render={props => <SkilBox items={skils.infra} {...props} />}
-            />
+            <SkilBox data={skils.db} animationDelay={0.16} />
+            <SkilBox data={skils.infra} />
           </Tile>
           <Tile isSize={4} isParent>
-            <Tile
-              isChild
-              render={props => <SkilBox items={skils.etc} {...props} />}
+            <SkilBox
+              className="is-hidden-mobile"
+              data={skils.etc}
+              animationDelay={0.16 * 2}
             />
           </Tile>
         </Tile>
       </Container>
-    </Section>
+    </NormalSection>
   )
 }
 
@@ -89,15 +73,16 @@ const skils = {
       ['Gulp', 3],
       ['VuePress', 1],
       ['Electron', 1],
-      ['Storybook', 1]
+      ['Storybook', 1],
+      ['etc...', null],
     ],
   },
   back: {
     title: 'Back-end',
     items: [['Express', 4], ['Fuel PHP', 4], ['Laravel', 2], ['Flask', 1]],
   },
-  DB: {
-    title: 'DB',
+  db: {
+    title: 'DataBase',
     items: [['MySQL', 4], ['PostgreSQL', 4], ['MongoDB', 1]],
   },
   infra: {
@@ -113,16 +98,15 @@ const skils = {
       ['VS Code', 5],
       ['Vim', 4],
       ['Git', 4],
-      ['Docker', 4],
+      ['Docker', 3],
       ['Prettier', null],
-      ['ESLint(TSLint)', null],
+      ['ESLint (TSLint)', null],
       ['Zsh', null],
-      ['HHKB', null],
+      ['hyper.js', null]
     ],
   },
   etc: {
-    title: 'Etc',
+    title: '',
     items: [],
   },
 }
-console.log(skils)

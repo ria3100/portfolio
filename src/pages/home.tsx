@@ -8,8 +8,8 @@ export default () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>My Title</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <title>Ria</title>
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
       <HomeTemplate />
     </>

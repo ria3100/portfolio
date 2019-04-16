@@ -112,9 +112,14 @@ $shades: mergeColorMaps(
 @import '../../../node_modules/bulma/sass/grid/_all.sass';
 @import '../../../node_modules/bulma/sass/layout/_all.sass';
 
+// My Style
 body {
   background: $dark;
 }
 #root {
   background: $white-ter;
+}
+::selection {
+  background: $primary;
+  color: hsl(0, 0%, 96%);
 }

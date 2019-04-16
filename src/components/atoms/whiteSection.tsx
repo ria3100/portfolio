@@ -6,4 +6,5 @@ export default styled(Section)`
   background: #fff;
   border-top: 1px solid #e4e4e4;
   border-bottom: 1px solid #e4e4e4;
+  padding: 9rem 1.5rem;
 `

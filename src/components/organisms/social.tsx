@@ -6,7 +6,7 @@ import { WhiteSection, SectionTitle, Animated } from '../atoms'
 
 export default () => {
   return (
-    <WhiteSection className="is-medium">
+    <WhiteSection>
       <Container>
         <SectionTitle tag="h3">Social</SectionTitle>
         <Columns isMobile>

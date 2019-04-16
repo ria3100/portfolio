@@ -1,3 +1,4 @@
+export { default as NormalSection } from './normalSection'
 export { default as DarkSection } from './darkSection'
 export { default as PrimarySection } from './primarySection'
 export { default as WhiteSection } from './whiteSection'

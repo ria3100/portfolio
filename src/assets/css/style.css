@@ -6392,3 +6392,7 @@ body {
 
 #root {
   background: #f7f7f7; }
+
+::selection {
+  background: #e91e63;
+  color: whitesmoke; }
