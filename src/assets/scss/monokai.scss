@@ -1,0 +1,161 @@
+// import web font
+@import url('//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css');
+
+$white: #f8f8f2;
+$black: #272822;
+$gray: #75715e;
+$red: #f92672;
+$blue: #66d9ef;
+$orange: #fd971f;
+$green: #a6e22e;
+$yellow: #e6db74;
+$purple: #ae81ff;
+
+$color: #f8f8f2;
+$background: #272822;
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: $color;
+  background: none;
+  font-family: Hack, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  background: $background;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: $background;
+}
+
+.token {
+  // Gray
+  &.comment,
+  &.blockquote,
+  &.shebang.important,
+  &.shebang {
+    color: $gray;
+  }
+
+  // Red
+  &.operator,
+  &.important,
+  &.keyword,
+  &.rule,
+  &.tag,
+  &.deleted,
+  &.selector,
+  &.prolog,
+  &.title .token.punctuation {
+    color: $red;
+  }
+
+  // Bule
+  &.property,
+  &.entity,
+  &.atrule,
+  &.command,
+  &.code {
+    color: $blue;
+  }
+
+  // Orange
+  &.regex,
+  &.token.atrule .token.property {
+    color: $orange;
+  }
+
+  // Green
+  &.pseudo-element,
+  &.id,
+  &.class,
+  &.class-name,
+  &.pseudo-class,
+  &.function,
+  &.namespace,
+  &.inserted,
+  &.symbol,
+  &.url-reference .token.variable,
+  &.attr-name {
+    color: $green;
+  }
+
+  // Yellow
+  &.string,
+  &.url,
+  &.list,
+  &.cdata,
+  &.attr-value,
+  &.attr-value a.token.url-link {
+    color: $yellow;
+  }
+
+  // Purple
+  &.constant,
+  &.hexcode,
+  &.builtin,
+  &.number,
+  &.boolean {
+    color: $purple;
+  }
+
+  // White
+  &.doctype,
+  &.punctuation,
+  &.variable,
+  &.macro.property {
+    color: $color;
+  }
+
+  // Help
+  &.entity {
+    cursor: help;
+  }
+
+  // Bold
+  &.title,
+  &.title .token.punctuation,
+  &.bold {
+    font-weight: bold;
+  }
+
+  // Italic
+  &.italic {
+    font-style: italic;
+  }
+}
+
+/* YAML */
+/* Bash */
+.language-yaml .token.atrule,
+.language-bash .token.function {
+  color: $red;
+}
+
+.line-numbers-rows {
+padding: .8em 0 .8em .8em;
+}

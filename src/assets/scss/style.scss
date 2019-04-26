@@ -36,9 +36,11 @@ $white-ter: #f7f7f7;
 
 // Update Bulma's global variables
 $link: $primary;
+$link-hover: #f27ba3;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 $footer-background-color: $dark;
+$body-background-color: $dark;
 
 // Update some of Bulma's component variables
 // $body-background-color: $grey-lighter;
@@ -106,20 +108,95 @@ $shades: mergeColorMaps(
   $custom-shades
 );
 
-@import '../../../node_modules/bulma/sass/base/_all.sass';
-@import '../../../node_modules/bulma/sass/elements/_all.sass';
-@import '../../../node_modules/bulma/sass/components/_all.sass';
-@import '../../../node_modules/bulma/sass/grid/_all.sass';
-@import '../../../node_modules/bulma/sass/layout/_all.sass';
+@import '../../../node_modules/bulma/bulma.sass';
+
+// PrismJs theme
+@import './monokai.scss';
+@import '~prismjs/plugins/line-numbers/prism-line-numbers.css';
+
+// Bluma PrismJS conflict
+.gatsby-highlight .tag,
+.gatsby-highlight .number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
+
+.gatsby-highlight {
+  margin-bottom: 16px;
+  > pre {
+    border-radius: 4px;
+  }
+}
+
+// .gatsby-highlight code[class*="language-"] {
+//   font-family: Hack !important;
+// }
 
 // My Style
-body {
+html, body {
   background: $dark;
 }
-#root {
-  background: $white-ter;
-}
+// #root {
+//   background: $white-ter;
+// }
 ::selection {
   background: $primary;
   color: hsl(0, 0%, 96%);
+}
+
+.blog-content {
+  .language-text {
+    background: #f7f7f7;
+    border: 1px solid #e4e4e4;
+    color: inherit;
+    padding: 4px 8px;
+  }
+
+  p {
+    margin-bottom: 1.6em;
+    line-height: 28px;
+    white-space:pre-wrap;
+  }
+
+  p + h2 {
+    margin-top: 1.6em;
+  }
+
+  h2 {
+    margin: 2em 0 1em;
+    font-size: 2em;
+    font-weight: bold;
+    color: #e91e63;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #f27ba3;
+
+    &::before {
+      content: "#";
+      padding-right: 8px;
+    }
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin: 1.6em 0;
+  }
+
+}
+
+body, .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+ 
+#footer {
+  margin-top: auto;
 }

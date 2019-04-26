@@ -1,22 +1,22 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
 import { Container, Button, Tag, Icon } from 'bloomer'
-import { GradationSection, SectionTitle } from '../atoms'
+import { NormalSection, SectionTitle } from '../atoms'
 
 export default () => {
   return (
-    <GradationSection>
+    <NormalSection css={style}>
       <Container>
         <SectionTitle tag="h3">Source Code</SectionTitle>
-        <LinkButtonArea>
+        <div className="link-button">
           <a target="_brank" href="https://github.com/ria3100/portfolio">
             <Button isColor="white" isFocused isSize="large">
               <Icon className="fab fa-github-square" />
               <span>GitHub</span>
             </Button>
           </a>
-        </LinkButtonArea>
+        </div>
         <Tag isColor="light">#React</Tag>&nbsp;|&nbsp;
         <Tag isColor="light">#React Hooks</Tag>&nbsp;|&nbsp;
         <Tag isColor="light">#TypeScript</Tag>&nbsp;|&nbsp;
@@ -29,13 +29,15 @@ export default () => {
         <Tag isColor="light">#TSLint</Tag>&nbsp;|&nbsp;
         <Tag isColor="light">#Netlify</Tag>
       </Container>
-    </GradationSection>
+    </NormalSection>
   )
 }
 
-const LinkButtonArea = styled.div`
-  text-align: center;
-  width: 100%;
-  float: left;
-  margin-bottom: 32px;
+const style = css`
+  & .link-button {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-bottom: 32px;
+  }
 `

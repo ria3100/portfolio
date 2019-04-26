@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
 import { Title, Icon } from 'bloomer'
 import { Stars, Animated } from '../atoms'
@@ -25,88 +25,89 @@ export default (props) => {
       animationDelay={props.animationDelay}
       animationDelayIsMobile={false}
     >
-      <StyledWrap isLarge={props.isLarge}>
+      <div className={props.isLarge && 'is-large'} css={style}>
         {props.data.title && <Title>{props.data.title}</Title>}
-        {rows[0].length > 0 && rows.map((row, rowIndex) => (
-          <ul key={rowIndex}>
-            {row.map((item, itemIndex) => (
-              <li key={itemIndex}>
-                <span className="item-name">{item[0]}</span>
-                <span className="star-area">
-                  {item[1] && <Stars star={item[1]} />}
-                </span>
-              </li>
-            ))}
-          </ul>
-        ))}
+        {rows[0].length > 0 &&
+          rows.map((row, rowIndex) => (
+            <ul key={rowIndex}>
+              {row.map((item, itemIndex) => (
+                <li key={itemIndex}>
+                  <span className="item-name">{item[0]}</span>
+                  <span className="star-area">
+                    {item[1] && <Stars star={item[1]} />}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ))}
         {rows[0].length === 0 && (
           <Icon isSize="large" className="fas fa-laugh fa-8x" />
         )}
-      </StyledWrap>
+      </div>
     </Animated>
   )
 }
 
-const StyledWrap = styled.div`
-  overflow: auto;
-  height: 100%;
+const style = css({
+  overflow: 'auto',
+  height: '100%',
 
-  .title {
-    font-family: 'Lato', sans-serif;
-    font-weight: 100;
-  }
+  '& .title': {
+    fontFamily: ['Lato', 'sans-serif'],
+    fontWeight: 100,
+  },
 
-  ul {
-    display: block;
-    float: left;
-    width: 100%;
-    ${(props: any) =>
-      props.isLarge &&
-      `
-        @media screen and (min-width: 769px) {
-          max-width: calc(50% - 32px);
-          &:last-child {
-            margin-left: 64px;
-          }
-        }
-      `}
+  '& ul': {
+    display: 'block',
+    float: 'left',
+    width: '100%',
 
-    & li {
-      height: 36px;
-      margin-bottom: 12px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #eee;
-      &:last-child {
-        border-bottom: none;
-      }
-    }
-  }
+    '& li': {
+      height: '36px',
+      marginBottom: '12px',
+      paddingBottom: '12px',
+      borderBottom: '1px solid #eee',
 
-  .item-name {
-    display: block;
-    float: left;
-  }
+      '&:last-child': {
+        borderBottom: 'none',
+      },
 
-  .star-area {
-    display: block;
-    float: right;
-  }
+      '& .item-name': {
+        display: 'block',
+        float: 'left',
+      },
 
-  .icon.is-large {
-    color: #f7a9c4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+      '& .star-area': {
+        display: 'block',
+        float: 'right',
+      },
+    },
+  },
 
-    & .fas.fa-laugh {
-      transition: .5s;
-      transform: rotateZ(0deg);
-      &:hover {
-        transform: rotateZ(40deg);
-      }
-    }
-  }
-`
+  '&.is-large ul': {
+    '@media screen and (min-width: 769px)': {
+      maxWidth: 'calc(50% - 32px)',
+      '&:last-child': {
+        marginLeft: '64px',
+      },
+    },
+  },
+
+  '& .icon.is-large': {
+    color: '#f7a9c4',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    width: '100%',
+
+    '& .fas.fa-laugh': {
+      transition: '.5s',
+      transform: 'rotateZ(0deg)',
+      '&:hover': {
+        transform: 'rotateZ(40deg)',
+      },
+    },
+  },
+})

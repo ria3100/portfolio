@@ -1,26 +1,26 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
 import { Icon } from 'bloomer'
 
-export default props => {
-  return (
-    <Stars>
-      {[...Array(5).keys()].map((cur, i) => (
+export default props => (
+  <span css={style}>
+    {[1, 2, 3, 4, 5].map((_, i) => {
+      return (
         <Icon
           key={i}
           className={`${i + 1 <= props.star ? 'fas' : 'far'} fa-star`}
         />
-      ))}
-    </Stars>
-  )
-}
+      )
+    })}
+  </span>
+)
 
-const Stars = styled.span`
-  & .icon {
-    width: 1rem;
-    height: 1rem;
-    font-size: 12px;
-    color: #e91e63;
+const style = css({
+  '& .icon': {
+    width: '1rem',
+    height: '1rem',
+    fontSize: '12px',
+    color: '#e91e63',
   }
-`
+})

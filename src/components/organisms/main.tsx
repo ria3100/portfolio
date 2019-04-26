@@ -1,48 +1,47 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
 import { Hero, HeroBody, Title, Subtitle, Container } from 'bloomer'
 import { Animated } from '../atoms'
 
 export default () => {
   return (
-    <Hero isColor="dark" isSize="medium">
-      <StyledHeroBody>
+    <Hero isColor="dark" isSize="medium" css={style}>
+      <HeroBody>
         <Container hasTextAlign="centered">
           <Animated animationInDuration={2400}>
-            <StyledTitle>Ria</StyledTitle>
+            <Title>Ria</Title>
           </Animated>
           <Animated animationIn="fadeInUp" animationDelay={0.16}>
-            <StyledSubtitle>Front-end Engineer</StyledSubtitle>
+            <Subtitle>Front-end Engineer</Subtitle>
           </Animated>
         </Container>
-      </StyledHeroBody>
+      </HeroBody>
     </Hero>
   )
 }
 
-const StyledHeroBody = styled(HeroBody)`
-  color: hsl(0, 0%, 96%);
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
 
-const StyledTitle = styled(Title)`
-  font-size: 3em;
-  font-size: 140px;
-  line-height: 140px;
-  font-weight: 700;
-  font-family: 'Product Sans', sans-serif;
-  @media screen and (max-width: 768px) {
-    font-size: 80px;
-    line-height: 80px;
+const style = css`
+  & .hero-body {
+    color: hsl(0, 0%, 96%);
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-`
 
-const StyledSubtitle = styled(Subtitle)`
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5rem;
+  & .title {
+    font-size: 3em;
+    font-size: 140px;
+    line-height: 140px;
+    font-weight: 700;
+    font-family: 'Product Sans', sans-serif;
+  }
+
+  & .subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+  }
 `

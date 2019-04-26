@@ -2,7 +2,7 @@ import types from './types'
 
 let nextTodoId = 0
 
-export const addTodo = (text:any) => ({
+export const addTodo = (text: string) => ({
   type: types.ADD_TODO,
   id: nextTodoId++,
   text,

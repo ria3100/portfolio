@@ -1,44 +1,70 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import { Link } from "react-router-dom";
+import React, { useState } from 'react'
+import { css } from '@emotion/core'
+import { Link } from 'gatsby'
 
 import {
   Navbar,
   NavbarBrand,
-  // NavbarItem,
   NavbarBurger,
-  // NavbarMenu,
+  NavbarMenu,
   // NavbarStart,
-  // NavbarEnd,
+  NavbarEnd,
 } from 'bloomer'
 
 export default () => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <StyledNavbar className="is-dark is-fixed-top">
-      <NavbarBrand>
-        <Link to="/" className="navbar-item">
-          #Ria
-        </Link>
-        <NavbarBurger isActive={false} />
-      </NavbarBrand>
-      {/* <NavbarMenu isActive={false}>
-        <NavbarEnd>
-          <Link to="/" className="navbar-item">About</Link>
-          <Link to="/" className="navbar-item">Contact</Link>
-          <Link to="/" className="navbar-item">Blog</Link>
-        </NavbarEnd>
-      </NavbarMenu> */}
-    </StyledNavbar>
+    <header css={style}>
+      <Navbar className="is-dark is-fixed-top">
+        <NavbarBrand>
+          <Link to="/" className="navbar-item">
+            #Ria
+          </Link>
+          {/* <NavbarBurger isActive={isOpen} onClick={() => {setIsOpen(!isOpen)}}/> */}
+        </NavbarBrand>
+        {/* <NavbarMenu isActive={isOpen}>
+          <NavbarEnd>
+            <Link to="/about/" className="navbar-item">About</Link>
+          </NavbarEnd>
+        </NavbarMenu> */}
+      </Navbar>
+    </header>
   )
 }
 
-const StyledNavbar = styled(Navbar)`
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  font-weight: bold;
-  padding: 0 16px;
-`
+const boxShadow = '0 0 4px rgba(0, 0, 0, 0.14), 0 4px 7px rgba(0, 0, 0, 0.28)'
 
-// const Logo = styled(NavbarItem)`
-//   font-family: 'Product Sans', sans-serif;
-//   color: #e91e63;
-// `
+const style = css({
+  marginTop: '52px',
+  '.navbar': {
+    boxShadow,
+    fontWeight: 'bold',
+    height: '52px',
+
+    '.navibar-brand, .navbar-menu': {
+      background: 'inherit',
+
+      '.navbar-item': {
+        color: 'hsl(0,0%,96%)',
+        '&:hover': {
+          background: 'inherit !important',
+          color: '#ee4c83 !important',
+        },
+      },
+    },
+
+    '.navibar-brand': {
+      padding: '0 16px',
+    },
+
+    '.navbar-menu': {
+      '@media screen and (max-width: 1088px)': {
+        boxShadow,
+
+        '.navbar-item': {
+          marginLeft: '2em',
+        },
+      },
+    },
+  },
+})
