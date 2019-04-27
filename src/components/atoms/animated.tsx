@@ -1,5 +1,5 @@
 import React from 'react'
-import { AnimatedOnScroll } from 'react-animated-css-onscroll'
+// import { AnimatedOnScroll } from 'react-animated-css-onscroll'
 import styled from '@emotion/styled'
 
 /* 
@@ -35,7 +35,10 @@ export default props => {
   )
 }
 
-const Animated = styled(AnimatedOnScroll)`
+const Foo = ({ children }) => <div>{children}</div>
+
+// const Animated = styled(AnimatedOnScroll)`
+const Animated = styled.div`
   animation-delay: ${(props: any) => props.delay}s !important;
   ${(props: any) =>
     !props.delayIsMobile &&
