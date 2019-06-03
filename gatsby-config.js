@@ -109,5 +109,11 @@ module.exports = {
         trackingId: 'UA-102407897-3',
       },
     },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'ja',
+      },
+    },
   ],
 }

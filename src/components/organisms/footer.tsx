@@ -16,7 +16,7 @@ export default () => (
                 Made with
                 <Icon hasTextColor="danger" className="fa fa-heart" />
                 by{' '}
-                <a target="_blank" href="https://github.com/ria3100">
+                <a target="_blank" rel="noreferrer" href="https://github.com/ria3100">
                   Ria
                 </a>
               </p>
