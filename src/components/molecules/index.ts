@@ -1,6 +1,5 @@
 export { default as Tools } from './tools'
 export { default as Profile } from './profile'
-export { default as SkilBox } from './skilBox'
 export { default as BlogListItem } from './blogListItem'
 export { default as Pagination } from './pagination'
 export { default as BlogDateTags } from './blogDateTags'

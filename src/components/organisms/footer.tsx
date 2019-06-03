@@ -22,18 +22,6 @@ export default () => (
               </p>
             </Column>
           </Columns>
-          {/* <Content isSize="small">
-            <p>
-              The source code is licensed under{' '}
-              <a
-                target="_blank"
-                href="https://opensource.org/licenses/mit-license.php"
-              >
-                MIT
-              </a>
-              .
-            </p>
-          </Content> */}
         </Content>
       </Container>
     </Footer>
