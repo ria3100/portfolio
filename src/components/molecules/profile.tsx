@@ -3,7 +3,6 @@ import { css } from '@emotion/core'
 import moment from 'moment'
 
 import { Container, Columns, Column, Image } from 'bloomer'
-import { NormalSection } from '../atoms'
 
 import profileImg from '../../assets/images/profile.jpg'
 
@@ -23,11 +22,11 @@ export default () => {
               <small>Atsushi Sakamoto</small>
             </p>
             <p>Front-end Engineer / Full-stack JavaScript Developer</p>
-            {/* <p>age: {age}</p> */}
+            <p>location: Osaka, age: {age}</p>
             <p className="text">
               Reactを用いたフロントエンド開発が得意。
               フロント周辺技術や関数型言語が好き。
-              使用言語は JavaScript, TypeScript, Python, Rust, Dart など。<br />
+              使用言語は JavaScript, TypeScript, Python, Rust, Dart ほか。<br />
               お問い合わせは気軽に{' '}
               <a
                 href="https://twitter.com/_Ria0130"
