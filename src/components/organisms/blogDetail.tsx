@@ -3,6 +3,7 @@ import { css } from '@emotion/core'
 
 import { Section, Container } from 'bloomer'
 import { Animated } from '../atoms'
+import { Profile } from '../molecules'
 
 export default ({ html }) => (
   <Section css={style}>
@@ -14,6 +15,7 @@ export default ({ html }) => (
         />
       </Animated>
     </Container>
+    <Profile />
   </Section>
 )
 

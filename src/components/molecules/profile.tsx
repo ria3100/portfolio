@@ -11,45 +11,35 @@ export default () => {
   const age = moment().diff(moment([1990, 1-1, 30]), 'years')
 
   return (
-    <NormalSection css={style}>
-      <Container>
-        <Columns>
-          <Column className="img-column" isSize={4}>
-            <Image src={profileImg} />
-          </Column>
-          <Column className="text-column" isSize={8}>
-            <ul>
-              <li>
-                <span>NAME:</span> Atsushi Sakamoto
-              </li>
-              <li>
-                <span>AGE:</span> {age}
-              </li>
-              <li>
-                <span>JOB TITLE:</span> Front-end Engineer
-              </li>
-              <li>
-                <span>LOCATION:</span> Osaka, Japan
-              </li>
-            </ul>
-            <div className="about">
-              元バックエンドのフロントエンドエンジニア。
-              <br />
-              新しいものやワクワクするものが好きです。
-              <br />
-              これからの Web にフロントの技術は不可欠だと感じており、SPA や
-              PWA などユーザー体験を重視したサイト構築が得意です。
-              <br />
-              関数型言語や Rust にも興味があります。
-            </div>
-          </Column>
-        </Columns>
-      </Container>
-    </NormalSection>
+    <Container css={style}>
+      <Columns>
+        <Column className="img-column" isSize={4}>
+          <Image src={profileImg} />
+        </Column>
+        <Column className="text-column" isSize={8}>
+          <div className="about">
+            <p className="name">
+              <strong>Ria</strong>
+              <small>Atsushi Sakamoto</small>
+            </p>
+            <p>Front-end Engineer / Full-stack JavaScript Developer</p>
+            {/* <p>age: {age}</p> */}
+            <p className="text">
+              Reactを用いたフロントエンド開発が得意。
+              フロント周辺技術や関数型言語が好き。 使用言語は JavaScript,
+              TypeScript, Python, Rust, Dart など。
+            </p>
+          </div>
+        </Column>
+      </Columns>
+    </Container>
   )
 }
 
 const style = css({
+  borderTop: '2px solid #e4e4e4',
+  padding: '64px 64px 64px 64px !important',
+
   '& .img-column': {
     padding: '0 16px',
 
@@ -58,29 +48,27 @@ const style = css({
       overflow: 'hidden',
       '@media screen and (max-width: 768px)': {
         maxWidth: '60%',
-        margin: '0 auto 3rem',
+        margin: '0 auto 2rem',
       },
     },
   },
 
   '& .text-column': {
-    '& ul': {
-      display: 'block',
-      float: 'left',
-      marginBottom: '16px',
-
-      '& li': {
-        float: 'left',
-        width: '100%',
-
-        '& span': {
-          display: 'inline-block',
-          width: '8rem',
-          fontWeight: 'bold',
-        },
+    '.about': {
+      '.name strong': {
+        fontFamily: ['Lato', 'sans-serif'],
+        letterSpacing: '0.05em',
+        fontWeight: 250,
+        fontSize: '2em',
+      },
+      '.name small': {
+        marginLeft: '16px',
+        fontSize: '1em',
+      },
+      '.text': {
+        marginTop: '16px',
       },
     },
-
     '@media screen and (min-width: 769px)': {
       paddingLeft: '32px',
     },
