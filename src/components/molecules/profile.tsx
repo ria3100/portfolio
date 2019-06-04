@@ -19,15 +19,24 @@ export default () => {
         <Column className="text-column" isSize={8}>
           <div className="about">
             <p className="name">
-              <strong>Ria</strong>
+              <strong>Ria🦀</strong>
               <small>Atsushi Sakamoto</small>
             </p>
             <p>Front-end Engineer / Full-stack JavaScript Developer</p>
             {/* <p>age: {age}</p> */}
             <p className="text">
               Reactを用いたフロントエンド開発が得意。
-              フロント周辺技術や関数型言語が好き。 使用言語は JavaScript,
-              TypeScript, Python, Rust, Dart など。
+              フロント周辺技術や関数型言語が好き。
+              使用言語は JavaScript, TypeScript, Python, Rust, Dart など。<br />
+              お問い合わせは気軽に{' '}
+              <a
+                href="https://twitter.com/_Ria0130"
+                target="blank"
+                alt="_Ria0130"
+              >
+                Twitter
+              </a>{' '}
+              の DM まで。
             </p>
           </div>
         </Column>
