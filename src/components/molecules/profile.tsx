@@ -27,7 +27,7 @@ export default () => {
               Reactを用いたフロントエンド開発が得意。
               フロント周辺技術や関数型言語が好き。
               使用言語は JavaScript, TypeScript, Python, Rust, Dart ほか。<br />
-              お問い合わせは気軽に{' '}
+              お問い合わせ、転職/副業のお誘いは気軽に{' '}
               <a
                 href="https://twitter.com/_Ria0130"
                 target="blank"
