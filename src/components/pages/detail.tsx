@@ -14,9 +14,15 @@ export default ({ data }: any) => {
         title={`${frontmatter.title} | Ria`}
         meta={[
           { name: 'description', content: frontmatter.title },
+          { property: 'og:type', content: 'blog' },
+          // { property: 'og:description', content: 'description' },
+          { property: 'og:title', content: frontmatter.title },
+          // { property: 'og:url', content: 'url' },
+          // { property: 'og:image', content: 'image' },
+          { property: 'og:site_name', content: 'Ria' },
+          { property: 'og:locale', content: 'ja_JP' },
         ]}
-      >
-      </Helmet>
+      />
       <DetailTemplate detailData={frontmatter} html={html} />
     </>
   )
